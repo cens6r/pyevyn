@@ -1,0 +1,20 @@
+{
+    "libs": {
+        "libinfo.json": {
+            "desc": "Library info",
+            "type": "JSON"
+        },
+        "colors.py": {
+            "desc": "Provides ANSI terminal coloring strings",
+            "type": "Python"
+        },
+        "fsutils.py":  {
+            "desc": "Provides useful filesystem helper functions",
+            "type": "Python"
+        },
+        "strings.py": {
+            "desc": "Provides helper string functions",
+            "type": "Python"
+        }
+    }
+}
