@@ -9,7 +9,8 @@ s_welcome = Strings.pad_spaces(f"{ANSIColors.GREEN}Welcome to yeppiidev's python
 m_lib_dir_list = os.listdir("lib")
 m_lib_dir_list = DirectoryFilters.filter_python_autogen(m_lib_dir_list)
 
-m_lib_info = json.loads(open("lib/libinfo.json", "r").read())
+m_lib_info_file = open("lib/libinfo.json", "r").read()
+m_lib_info = json.loads(m_lib_info_file)
 
 Strings.lines(f"{ANSIColors.BROWN}={ANSIColors.END}", len(s_welcome))
 print(s_welcome)
@@ -25,3 +26,5 @@ for item in m_lib_dir_list:
         l_item_type = 'Unknown?'
     
     print(f" ({l_item_type}) {ANSIColors.LIGHT_BLUE}{ANSIColors.BLINK}->{ANSIColors.END} {ANSIColors.YELLOW}{l_extstripped_item}{ANSIColors.END}: {m_lib_info['libs'][item]['desc']}")
+    
+m_lib_info_file.close()
